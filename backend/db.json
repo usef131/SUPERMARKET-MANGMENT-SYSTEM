@@ -297,5 +297,13 @@
       "img": "./images/soda.webp"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "Users": [
+    {
+      "id": "1",
+      "username" : "Youssef1234",
+      "email" : "youssefahemd729@gmail.com",
+      "password" : "1234",
+      "role": "manager" 
+    }
+  ]
 }
