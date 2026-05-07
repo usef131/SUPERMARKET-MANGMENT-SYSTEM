@@ -34,7 +34,6 @@ This project simulates a real-world supermarket system where users can:
 - Frontend: React.js
 - Styling: Bootstrap / React-Bootstrap
 - State Management: Context API
-- Backend: Node.js + Express
 - Storage: Local Storage + JSON server 
 
 ---
