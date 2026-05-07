@@ -2,6 +2,7 @@ import { createContext, useContext } from "react";
 import { toast } from 'react-toastify'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import axios from "axios";
+import swal from "sweetalert2";
 const CartContext = createContext();
 
 const url = "http://localhost:3000/products";
@@ -81,6 +82,27 @@ export const CartProvider = ({ children }) => {
 
         return response;
     }
+    
+    const ConfirmCheckout =() => {
+         swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, checkout!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                swal.fire(
+                'Checked out!',
+                'Your order has been placed.',
+                'success'              )
+                clearCart();
+            }
+            })
+    }
+
 
     const values = {
         addToCart,
@@ -91,7 +113,8 @@ export const CartProvider = ({ children }) => {
         cartTotalPrices,
         NumberOfItemsInCart,
         addProduct,
-        deleteProduct
+        deleteProduct,
+        ConfirmCheckout
     }
 
     return <>

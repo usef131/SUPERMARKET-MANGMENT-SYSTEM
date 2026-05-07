@@ -6,7 +6,7 @@ import CartitemCard from "./CartitemCard";
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from "react-router-dom";
 function ShowCart() {
-    const { cartItems, cartTotalPrices, NumberOfItemsInCart , clearCart} = useCart();
+    const { cartItems, cartTotalPrices, NumberOfItemsInCart , clearCart , ConfirmCheckout } = useCart();
     const navigate = useNavigate();
     return (
         <>
@@ -51,7 +51,7 @@ function ShowCart() {
                                 </Card.Text>
                                 <hr />
                                 <div>
-                                    <button className="btn btn-success w-100 " disabled={cartItems.length === 0}>
+                                    <button className="btn btn-success w-100 " disabled={cartItems.length === 0} onClick={ConfirmCheckout}>
                                         Proceed to Checkout
                                     </button>
                                     <button className="btn btn-dark w-100 mt-2" disabled={cartItems.length === 0} onClick={() => navigate('/')}>
