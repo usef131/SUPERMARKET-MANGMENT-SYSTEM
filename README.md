@@ -18,13 +18,11 @@ This project simulates a real-world supermarket system where users can:
 ## Features
 
 * Add products to cart
-* Increase / decrease product quantity
+* Increase/decrease product quantity
 * Remove items from cart
 * Calculate total price dynamically
 * Display all available products
 * Real-time cart updates
-* Data persistence using SQL Server
-
 ---
 
 ## Technologies Used
