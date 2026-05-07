@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 import { toast } from 'react-toastify'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import axios from "axios";
-import swal from "sweetalert2";
+import swal from "Sweetalert2";
 const CartContext = createContext();
 
 const url = "http://localhost:3000/products";
