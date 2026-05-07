@@ -8,10 +8,11 @@ import ProductCard from './ProductCard';
 import { useProducts } from '../Hooks/useProducts';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import swal from 'sweetalert2';
 function DeleteProduct() {
     const { deleteProduct } = useCart();
-    const { data  , setData} = useProducts("http://localhost:3000/products");
-    
+    const { data, setData } = useProducts("http://localhost:3000/products");
+
 
     return (
         <>
@@ -37,8 +38,29 @@ function DeleteProduct() {
                                             {product.category}
                                         </Card.Text>
                                         <Button variant="danger" onClick={() => {
-                                            deleteProduct(product);
-                                            setData(data.filter((item) => item.id !== product.id));
+                                            swal.fire({
+                                                title: 'Are you sure?',
+                                                text: "You won't be able to revert this!",
+                                                icon: 'warning',
+                                                showCancelButton: true,
+                                                confirmButtonColor: '#3eb517',
+                                                cancelButtonColor: '#d33',
+                                                confirmButtonText: 'delete'
+                                            }).then((result) => {
+                                                if (result.isConfirmed) {
+                                                    deleteProduct(product);
+                                    
+                                                    swal.fire({
+                                                       title: 'product deleted successfully',
+                                                       icon: 'success'
+                                                    }
+                                                    )
+                                                     setData(data.filter((item) => item.id !== product.id));
+
+                                                }
+                                            })
+                                            
+                                           
                                         }}>
                                             Delete Product
                                         </Button>

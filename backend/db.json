@@ -1,263 +1,301 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Cheese",
-      "price": 10.99,
+      "id": "1",
+      "name": "romy cheese",
+      "price": "25",
       "category": "Dairy",
+      "stock": "95",
       "img": "./images/cheese.jpg"
     },
     {
-      "id": 2,
-      "name": "Milk",
-      "price": 19.99,
+      "id": "2",
+      "name": "full milk",
+      "price": "20",
       "category": "Dairy",
+      "stock": 100,
       "img": "./images/milk.webp"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bread",
       "price": 5.99,
       "category": "Bakery",
+      "stock": 100,
       "img": "./images/bread.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Eggs",
       "price": 3.99,
       "category": "Dairy",
+      "stock": 100,
       "img": "./images/eggs.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Butter",
       "price": 7.99,
       "category": "Dairy",
+      "stock": 100,
       "img": "./images/butter.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Yogurt",
       "price": 4.99,
       "category": "Dairy",
+      "stock": 100,
       "img": "./images/yogurt.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Juice",
       "price": 2.99,
       "category": "Beverages",
+      "stock": 100,
       "img": "./images/juice.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Tomatoes",
       "price": 8.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/tomato.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Apples",
       "price": 4.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/apples.jpeg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Bananas",
       "price": 3.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/banana.webp"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Oranges",
       "price": 5.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/orange.webp"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Grapes",
       "price": 6.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/grapes.webp"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Strawberries",
       "price": 7.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/strawberry.webp"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Blueberries",
       "price": 8.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/blueberry.webp"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Watermelon",
       "price": 9.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/watermelone.webp"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Pineapple",
       "price": 10.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/pineapple.webp"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Mango",
       "price": 11.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/mango.webp"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Peach",
       "price": 12.99,
+      "stock": 100,
       "category": "Produce",
       "img": "./images/peach.webp"
     },
     {
-      "id": 20,
+      "id": "19",
       "name": "Meat",
       "price": 14.99,
+      "stock": 100,
       "category": "Meat",
       "img": "./images/meat.webp"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Fish",
       "price": 15.99,
+      "stock": 100,
       "category": "Seafood",
       "img": "./images/fish.webp"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Chicken",
       "price": 16.99,
+      "stock": 100,
       "category": "Meat",
       "img": "./images/chicken.webp"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Shampoo",
       "price": 17.99,
+      "stock": 100,
       "category": "Personal Care",
       "img": "./images/shampoo.webp"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Shower Gel",
       "price": 18.99,
+      "stock": 100,
       "category": "Personal Care",
       "img": "./images/shower_gel.webp"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Toothpaste",
       "price": 19.99,
+      "stock": 100,
       "category": "Personal Care",
       "img": "./images/toothpaste.webp"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Deodorant",
       "price": 20.99,
+      "stock": 100,
       "category": "Personal Care",
       "img": "./images/deodrant.webp"
     },
     {
-      "id": 30,
+      "id": "28",
       "name": "Conditioner",
       "price": 23.99,
+      "stock": 100,
       "category": "Personal Care",
       "img": "./images/conditioner.webp"
     },
     {
-      "id": 31,
+      "id": "29",
       "name": "Chips",
       "price": 24.99,
+      "stock": 100,
       "category": "Snacks",
       "img": "./images/chips.webp"
     },
     {
-      "id": 32,
+      "id": "30",
       "name": "Cookies",
       "price": 25.99,
+      "stock": 100,
       "category": "Snacks",
       "img": "./images/cookies.webp"
     },
     {
-      "id": 33,
+      "id": "31",
       "name": "Candy",
       "price": 26.99,
+      "stock": 100,
       "category": "Snacks",
       "img": "./images/candy.webp"
     },
     {
-      "id": 34,
+      "id": "32",
       "name": "Soda",
       "price": 27.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/soda.webp"
     },
     {
-      "id": 35,
+      "id": "33",
       "name": "Ice Cream",
       "price": 28.99,
+      "stock": 100,
       "category": "Desserts",
       "img": "./images/ice_cream.webp"
     },
     {
-      "id": 36,
+      "id": "34",
       "name": "Chocolate",
       "price": 29.99,
+      "stock": 100,
       "category": "Desserts",
       "img": "./images/chocolate.webp"
     },
     {
-      "id": 37,
+      "id": "35",
       "name": "Coffee",
       "price": 30.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/coffee1.webp"
     },
     {
-      "id": 38,
+      "id": "36",
       "name": "Tea",
       "price": 31.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/tea1.webp"
     },
     {
-      "id": 29,
+      "id": "37",
       "name": "Juice",
       "price": 32.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/juice.jpg"
     },
     {
-      "id": 28,
+      "id": "38",
       "name": "Water",
       "price": 33.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/water.webp"
     },
     {
-      "id": 23,
+      "id": "39",
       "name": "Soda",
       "price": 34.99,
+      "stock": 100,
       "category": "Beverages",
       "img": "./images/soda.webp"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

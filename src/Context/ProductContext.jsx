@@ -89,20 +89,24 @@ export const CartProvider = ({ children }) => {
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#3eb517',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, checkout!'
+            confirmButtonText: 'Confirm Checkout'
           }).then((result) => {
             if (result.isConfirmed) {
                 swal.fire(
                 'Checked out!',
                 'Your order has been placed.',
-                'success'              )
+                'success')
                 clearCart();
             }
             })
     }
+    const UpdateProduct = async (updatedProduct) => {
 
+        const response = await axios.put(`${url}/${updatedProduct.id}`, updatedProduct);
+        return response;
+    }
 
     const values = {
         addToCart,
@@ -114,7 +118,8 @@ export const CartProvider = ({ children }) => {
         NumberOfItemsInCart,
         addProduct,
         deleteProduct,
-        ConfirmCheckout
+        ConfirmCheckout,    
+        UpdateProduct
     }
 
     return <>

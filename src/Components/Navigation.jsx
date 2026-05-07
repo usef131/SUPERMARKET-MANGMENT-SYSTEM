@@ -27,6 +27,7 @@ function Navigation() {
                         </Nav.Link>
                          <Nav.Link href="/add-product"><i className="bi bi-plus-circle me-2"></i>Add Product</Nav.Link>
                         <Nav.Link href="/delete-product"><i className="bi bi-trash me-2"></i>Delete Product</Nav.Link>
+                        <Nav.Link href="/update-product-page"><i className="bi bi-pencil me-2"></i>Update Product</Nav.Link>
                         <Nav.Link href="/contact"><i className="bi bi-envelope me-2"></i>Contact</Nav.Link>
                     </Nav>
                 </Container>

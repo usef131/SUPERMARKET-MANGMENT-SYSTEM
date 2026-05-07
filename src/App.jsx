@@ -6,6 +6,8 @@ import { ToastContainer } from 'react-toastify';
 import Contact from "./Components/Contact";
 import AddProduct from "./Components/AddProduct";
 import DeleteProduct from "./Components/DeleteProduct";
+import UpdateProductPage from "./Components/UpdateProductPage";
+import UpdateProductLogic from "./Components/UpdateProductlogic";
 function App() {
 
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/delete-product" element={<DeleteProduct />} />
+          <Route path="/update-product-page" element={<UpdateProductPage />} />  
+          <Route path="/update-product-logic/:id" element={<UpdateProductLogic />} />
         </Routes>
    
     </>
