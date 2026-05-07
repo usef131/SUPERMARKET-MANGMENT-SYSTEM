@@ -1,0 +1,263 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cheese",
+      "price": 10.99,
+      "category": "Dairy",
+      "img": "./images/cheese.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Milk",
+      "price": 19.99,
+      "category": "Dairy",
+      "img": "./images/milk.webp"
+    },
+    {
+      "id": 3,
+      "name": "Bread",
+      "price": 5.99,
+      "category": "Bakery",
+      "img": "./images/bread.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Eggs",
+      "price": 3.99,
+      "category": "Dairy",
+      "img": "./images/eggs.png"
+    },
+    {
+      "id": 5,
+      "name": "Butter",
+      "price": 7.99,
+      "category": "Dairy",
+      "img": "./images/butter.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Yogurt",
+      "price": 4.99,
+      "category": "Dairy",
+      "img": "./images/yogurt.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Juice",
+      "price": 2.99,
+      "category": "Beverages",
+      "img": "./images/juice.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Tomatoes",
+      "price": 8.99,
+      "category": "Produce",
+      "img": "./images/tomato.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Apples",
+      "price": 4.99,
+      "category": "Produce",
+      "img": "./images/apples.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "Bananas",
+      "price": 3.99,
+      "category": "Produce",
+      "img": "./images/banana.webp"
+    },
+    {
+      "id": 11,
+      "name": "Oranges",
+      "price": 5.99,
+      "category": "Produce",
+      "img": "./images/orange.webp"
+    },
+    {
+      "id": 12,
+      "name": "Grapes",
+      "price": 6.99,
+      "category": "Produce",
+      "img": "./images/grapes.webp"
+    },
+    {
+      "id": 13,
+      "name": "Strawberries",
+      "price": 7.99,
+      "category": "Produce",
+      "img": "./images/strawberry.webp"
+    },
+    {
+      "id": 14,
+      "name": "Blueberries",
+      "price": 8.99,
+      "category": "Produce",
+      "img": "./images/blueberry.webp"
+    },
+    {
+      "id": 15,
+      "name": "Watermelon",
+      "price": 9.99,
+      "category": "Produce",
+      "img": "./images/watermelone.webp"
+    },
+    {
+      "id": 16,
+      "name": "Pineapple",
+      "price": 10.99,
+      "category": "Produce",
+      "img": "./images/pineapple.webp"
+    },
+    {
+      "id": 17,
+      "name": "Mango",
+      "price": 11.99,
+      "category": "Produce",
+      "img": "./images/mango.webp"
+    },
+    {
+      "id": 18,
+      "name": "Peach",
+      "price": 12.99,
+      "category": "Produce",
+      "img": "./images/peach.webp"
+    },
+    {
+      "id": 20,
+      "name": "Meat",
+      "price": 14.99,
+      "category": "Meat",
+      "img": "./images/meat.webp"
+    },
+    {
+      "id": 21,
+      "name": "Fish",
+      "price": 15.99,
+      "category": "Seafood",
+      "img": "./images/fish.webp"
+    },
+    {
+      "id": 22,
+      "name": "Chicken",
+      "price": 16.99,
+      "category": "Meat",
+      "img": "./images/chicken.webp"
+    },
+    {
+      "id": 24,
+      "name": "Shampoo",
+      "price": 17.99,
+      "category": "Personal Care",
+      "img": "./images/shampoo.webp"
+    },
+    {
+      "id": 25,
+      "name": "Shower Gel",
+      "price": 18.99,
+      "category": "Personal Care",
+      "img": "./images/shower_gel.webp"
+    },
+    {
+      "id": 26,
+      "name": "Toothpaste",
+      "price": 19.99,
+      "category": "Personal Care",
+      "img": "./images/toothpaste.webp"
+    },
+    {
+      "id": 27,
+      "name": "Deodorant",
+      "price": 20.99,
+      "category": "Personal Care",
+      "img": "./images/deodrant.webp"
+    },
+    {
+      "id": 30,
+      "name": "Conditioner",
+      "price": 23.99,
+      "category": "Personal Care",
+      "img": "./images/conditioner.webp"
+    },
+    {
+      "id": 31,
+      "name": "Chips",
+      "price": 24.99,
+      "category": "Snacks",
+      "img": "./images/chips.webp"
+    },
+    {
+      "id": 32,
+      "name": "Cookies",
+      "price": 25.99,
+      "category": "Snacks",
+      "img": "./images/cookies.webp"
+    },
+    {
+      "id": 33,
+      "name": "Candy",
+      "price": 26.99,
+      "category": "Snacks",
+      "img": "./images/candy.webp"
+    },
+    {
+      "id": 34,
+      "name": "Soda",
+      "price": 27.99,
+      "category": "Beverages",
+      "img": "./images/soda.webp"
+    },
+    {
+      "id": 35,
+      "name": "Ice Cream",
+      "price": 28.99,
+      "category": "Desserts",
+      "img": "./images/ice_cream.webp"
+    },
+    {
+      "id": 36,
+      "name": "Chocolate",
+      "price": 29.99,
+      "category": "Desserts",
+      "img": "./images/chocolate.webp"
+    },
+    {
+      "id": 37,
+      "name": "Coffee",
+      "price": 30.99,
+      "category": "Beverages",
+      "img": "./images/coffee1.webp"
+    },
+    {
+      "id": 38,
+      "name": "Tea",
+      "price": 31.99,
+      "category": "Beverages",
+      "img": "./images/tea1.webp"
+    },
+    {
+      "id": 29,
+      "name": "Juice",
+      "price": 32.99,
+      "category": "Beverages",
+      "img": "./images/juice.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Water",
+      "price": 33.99,
+      "category": "Beverages",
+      "img": "./images/water.webp"
+    },
+    {
+      "id": 23,
+      "name": "Soda",
+      "price": 34.99,
+      "category": "Beverages",
+      "img": "./images/soda.webp"
+    }
+  ]
+}
