@@ -3,15 +3,15 @@
     {
       "id": "1",
       "name": "romy cheese",
-      "price": "25",
+      "price": 25,
       "category": "Dairy",
-      "stock": "95",
+      "stock": 95,
       "img": "./images/cheese.jpg"
     },
     {
       "id": "2",
       "name": "full milk",
-      "price": "20",
+      "price": 20,
       "category": "Dairy",
       "stock": 85,
       "img": "./images/milk.webp"
@@ -27,7 +27,7 @@
     {
       "id": "4",
       "name": "Eggs",
-      "price": "5.99",
+      "price": 5.99,
       "category": "Dairy",
       "stock": 0,
       "img": "./images/eggs.png"
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "name": "Butter",
-      "price": "9.99",
+      "price": 9.99,
       "category": "Dairy",
       "stock": 0,
       "img": "./images/butter.jpg"
@@ -115,7 +115,7 @@
     {
       "id": "15",
       "name": "Watermelon",
-      "price": "12",
+      "price": 12,
       "stock": 0,
       "category": "Produce",
       "img": "./images/watermelone.webp"
@@ -139,7 +139,7 @@
     {
       "id": "18",
       "name": "Peach",
-      "price": "20",
+      "price": 20,
       "stock": 0,
       "category": "Produce",
       "img": "./images/peach.webp"

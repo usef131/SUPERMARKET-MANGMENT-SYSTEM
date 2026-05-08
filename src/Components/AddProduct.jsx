@@ -11,8 +11,8 @@ function AddProduct() {
     const [product, setProduct] = useState({
         name: "",
         category: "",
-        price: "",
-        stock: ""
+        price: 0,
+        stock: 0
     });
 
     const SubmitForm = (event) => {
@@ -38,8 +38,8 @@ function AddProduct() {
         setProduct({
             name: "",
             category: "",
-            price: "",
-            stock: "",
+            price: 0,
+            stock: 0,
             image: ""
         });
     };
