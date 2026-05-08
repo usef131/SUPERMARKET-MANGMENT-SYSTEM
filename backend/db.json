@@ -287,14 +287,6 @@
       "stock": 97,
       "category": "Beverages",
       "img": "./images/water.webp"
-    },
-    {
-      "id": "39",
-      "name": "Soda",
-      "price": 34.99,
-      "stock": 100,
-      "category": "Beverages",
-      "img": "./images/soda.webp"
     }
   ],
   "Users": [
@@ -583,5 +575,6 @@
       "CashierUserName": "karim",
       "id": "ok01-UV7xro"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

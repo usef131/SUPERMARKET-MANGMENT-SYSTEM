@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import {
     Container,
     Row,
@@ -25,57 +25,57 @@ export default function RegisterPage() {
     });
 
     const handleRoleChange = (e) => {
-    setFormData({
-      ...formData,
-      role: e.target.value,
-    });
-  };
+        setFormData({
+            ...formData,
+            role: e.target.value,
+        });
+    };
 
-  const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value,
-  });
-};
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
 
 
-   const handleRegister = async (e) => {
-  e.preventDefault();
+    const handleRegister = async (e) => {
+        e.preventDefault();
 
-  try {
-    const res = await axios.get("http://localhost:3000/Users");
+        try {
+            const res = await axios.get("http://localhost:3000/Users");
 
-    // check if email exists
-    const exist = res.data.find(
-      (user) => user.email === formData.email
-    );
+            // check if email exists
+            const exist = res.data.find(
+                (user) => user.email === formData.email
+            );
 
-    if (exist) {
-      alert("Email already exists!");
-      return;
-    }
+            if (exist) {
+                alert("Email already exists!");
+                return;
+            }
 
-    // check password match
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
+            // check password match
+            if (formData.password !== formData.confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
 
-    // remove confirmPassword before sending to API
-    const { confirmPassword, ...userData } = formData;
+            // remove confirmPassword before sending to API
+            const { confirmPassword, ...userData } = formData;
 
-    // send only real user data
-    await axios.post("http://localhost:3000/Users", userData);
+            // send only real user data
+            await axios.post("http://localhost:3000/Users", userData);
 
-    alert("Account created successfully!");
+            alert("Account created successfully!");
 
-   navigate("/", { replace: true });
-    window.location.reload();
-  } catch (error) {
-    console.log(error);
-    alert("Something went wrong");
-  }
-};
+            navigate("/", { replace: true });
+            window.location.reload();
+        } catch (error) {
+            console.log(error);
+            alert("Something went wrong");
+        }
+    };
 
     return (
         <div
@@ -163,28 +163,28 @@ export default function RegisterPage() {
                                     </Form.Group>
 
                                     <div className="d-flex justify-content-between align-items-center mb-4">
-                                 <label>
-                                   <input
-                                    type="radio"
-                                   name="role"
-                                   value="manager"
-                                   checked={formData.role === "manager"}
-                                  onChange={handleRoleChange}
-                                      />
-                                  Manager
-                                    </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                name="role"
+                                                value="manager"
+                                                checked={formData.role === "manager"}
+                                                onChange={handleRoleChange}
+                                            />
+                                            Manager
+                                        </label>
 
-                                     <label>
-                                  <input
-                                       type="radio"
-                                    name="role"
-                                      value="cashier"
-                                      checked={formData.role === "cashier"}
-                                    onChange={handleRoleChange}
-                                      />
-                                Cashier
-                               </label>
-                                 </div>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                name="role"
+                                                value="cashier"
+                                                checked={formData.role === "cashier"}
+                                                onChange={handleRoleChange}
+                                            />
+                                            Cashier
+                                        </label>
+                                    </div>
 
                                     {/* Register Button */}
                                     <Button
