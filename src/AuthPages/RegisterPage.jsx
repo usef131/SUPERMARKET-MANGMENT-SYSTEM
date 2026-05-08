@@ -11,6 +11,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
 
@@ -24,13 +25,6 @@ export default function RegisterPage() {
         role: ""
     });
 
-    const handleRoleChange = (e) => {
-        setFormData({
-            ...formData,
-            role: e.target.value,
-        });
-    };
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -38,48 +32,71 @@ export default function RegisterPage() {
         });
     };
 
-
     const handleRegister = async (e) => {
         e.preventDefault();
+
+        // check role
+        if (!formData.role) {
+            toast.error("Please select a role");
+            return;
+        }
+
+        // check password match
+        if (formData.password !== formData.confirmPassword) {
+            toast.error("Passwords do not match!");
+            return;
+        }
 
         try {
             const res = await axios.get("http://localhost:3000/Users");
 
             // check if email exists
             const exist = res.data.find(
-                (user) => user.email === formData.email
+                (user) =>
+                    user.email.toLowerCase() ===
+                    formData.email.toLowerCase().trim()
             );
 
             if (exist) {
-                alert("Email already exists!");
+                toast.error("Email already exists!");
                 return;
             }
 
-            // check password match
-            if (formData.password !== formData.confirmPassword) {
-                alert("Passwords do not match!");
-                return;
-            }
+            // remove confirmPassword
+            const userData = {
+                username: formData.username,
+                email: formData.email,
+                password: formData.password,
+                role: formData.role,
+            };
 
-            // remove confirmPassword before sending to API
-            const { confirmPassword, ...userData } = formData;
+            // clean data
+            const finalUser = {
+                ...userData,
+                username: formData.username.trim(),
+                email: formData.email.trim(),
+            };
 
-            // send only real user data
-            await axios.post("http://localhost:3000/Users", userData);
+            // send data
+            await axios.post(
+                "http://localhost:3000/Users",
+                finalUser
+            );
 
-            alert("Account created successfully!");
 
             navigate("/", { replace: true });
             window.location.reload();
+            toast.success("Account created successfully!");
+
         } catch (error) {
             console.log(error);
-            alert("Something went wrong");
+            toast.error("Something went wrong");
         }
     };
 
     return (
         <div
-            className="d-flex align-items-center justify-content-center "
+            className="d-flex align-items-center justify-content-center"
             style={{
                 minHeight: "100vh",
                 background: "white",
@@ -89,22 +106,29 @@ export default function RegisterPage() {
                 <Row className="justify-content-center">
                     <Col md={6}>
                         <Card
-                            className="shadow-lg border-0 "
+                            className="shadow-lg border-0"
                             style={{ borderRadius: "20px" }}
-
                         >
                             <Card.Body className="p-5">
+
                                 <div className="text-center mb-4">
-                                    <h2 className="fw-bold">Create Account</h2>
+                                    <h2 className="fw-bold">
+                                        Create Account
+                                    </h2>
+
                                     <p className="text-muted">
                                         Register to get started
                                     </p>
                                 </div>
 
                                 <Form onSubmit={handleRegister}>
+
                                     {/* Username */}
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Username</Form.Label>
+                                        <Form.Label>
+                                            Username
+                                        </Form.Label>
+
                                         <Form.Control
                                             type="text"
                                             name="username"
@@ -112,14 +136,19 @@ export default function RegisterPage() {
                                             size="lg"
                                             value={formData.username}
                                             onChange={handleChange}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{
+                                                borderRadius: "12px"
+                                            }}
                                             required
                                         />
                                     </Form.Group>
 
                                     {/* Email */}
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Email Address</Form.Label>
+                                        <Form.Label>
+                                            Email Address
+                                        </Form.Label>
+
                                         <Form.Control
                                             type="email"
                                             name="email"
@@ -127,14 +156,19 @@ export default function RegisterPage() {
                                             size="lg"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{
+                                                borderRadius: "12px"
+                                            }}
                                             required
                                         />
                                     </Form.Group>
 
                                     {/* Password */}
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Password</Form.Label>
+                                        <Form.Label>
+                                            Password
+                                        </Form.Label>
+
                                         <Form.Control
                                             type="password"
                                             name="password"
@@ -142,14 +176,19 @@ export default function RegisterPage() {
                                             size="lg"
                                             value={formData.password}
                                             onChange={handleChange}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{
+                                                borderRadius: "12px"
+                                            }}
                                             required
                                         />
                                     </Form.Group>
 
                                     {/* Confirm Password */}
                                     <Form.Group className="mb-4">
-                                        <Form.Label>Confirm Password</Form.Label>
+                                        <Form.Label>
+                                            Confirm Password
+                                        </Form.Label>
+
                                         <Form.Control
                                             type="password"
                                             name="confirmPassword"
@@ -157,21 +196,28 @@ export default function RegisterPage() {
                                             size="lg"
                                             value={formData.confirmPassword}
                                             onChange={handleChange}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{
+                                                borderRadius: "12px"
+                                            }}
                                             required
                                         />
                                     </Form.Group>
 
+                                    {/* Roles */}
                                     <div className="d-flex justify-content-between align-items-center mb-4">
+
                                         <label>
                                             <input
                                                 type="radio"
                                                 name="role"
                                                 value="manager"
-                                                checked={formData.role === "manager"}
-                                                onChange={handleRoleChange}
+                                                checked={
+                                                    formData.role === "manager"
+                                                }
+                                                onChange={handleChange}
                                             />
-                                            Manager
+
+                                            {" "}Manager
                                         </label>
 
                                         <label>
@@ -179,11 +225,15 @@ export default function RegisterPage() {
                                                 type="radio"
                                                 name="role"
                                                 value="cashier"
-                                                checked={formData.role === "cashier"}
-                                                onChange={handleRoleChange}
+                                                checked={
+                                                    formData.role === "cashier"
+                                                }
+                                                onChange={handleChange}
                                             />
-                                            Cashier
+
+                                            {" "}Cashier
                                         </label>
+
                                     </div>
 
                                     {/* Register Button */}
@@ -199,20 +249,27 @@ export default function RegisterPage() {
                                     >
                                         Register
                                     </Button>
+
                                 </Form>
 
                                 {/* Login Link */}
                                 <div className="text-center mt-4">
+
                                     <span className="text-muted">
                                         Already have an account?
-                                    </span>{" "}
+                                    </span>
+
+                                    {" "}
+
                                     <a
                                         href="/"
                                         className="text-decoration-none fw-semibold"
                                     >
                                         Login
                                     </a>
+
                                 </div>
+
                             </Card.Body>
                         </Card>
                     </Col>

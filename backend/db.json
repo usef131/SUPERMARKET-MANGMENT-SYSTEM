@@ -338,6 +338,34 @@
       "password": "keks",
       "role": "cashier",
       "id": "dYulZwVH0kg"
+    },
+    {
+      "username": "mariam",
+      "email": "mariam@gmail.com",
+      "password": "1234",
+      "role": "cashier",
+      "id": "XpezHob_er8"
+    },
+    {
+      "username": "s3ody",
+      "email": "s3ody@gmail.com",
+      "password": "1234",
+      "role": "cashier",
+      "id": "--O8MdZrQW4"
+    },
+    {
+      "username": "jana",
+      "email": "jana@gmail.com",
+      "password": "1234",
+      "role": "manager",
+      "id": "bJMIJ0kiy68"
+    },
+    {
+      "username": "yassin",
+      "email": "yassin@gmail.com",
+      "password": "1234",
+      "role": "cashier",
+      "id": "CEF1PZJDZxA"
     }
   ],
   "OrdersLog": [
