@@ -13,7 +13,7 @@
       "name": "full milk",
       "price": "20",
       "category": "Dairy",
-      "stock": 100,
+      "stock": 85,
       "img": "./images/milk.webp"
     },
     {
@@ -21,23 +21,23 @@
       "name": "Bread",
       "price": 5.99,
       "category": "Bakery",
-      "stock": 100,
+      "stock": 90,
       "img": "./images/bread.jpg"
     },
     {
       "id": "4",
       "name": "Eggs",
-      "price": 3.99,
+      "price": "5.99",
       "category": "Dairy",
-      "stock": 100,
+      "stock": 0,
       "img": "./images/eggs.png"
     },
     {
       "id": "5",
       "name": "Butter",
-      "price": 7.99,
+      "price": "9.99",
       "category": "Dairy",
-      "stock": 100,
+      "stock": 0,
       "img": "./images/butter.jpg"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Yogurt",
       "price": 4.99,
       "category": "Dairy",
-      "stock": 100,
+      "stock": 96,
       "img": "./images/yogurt.jpg"
     },
     {
@@ -53,14 +53,14 @@
       "name": "Juice",
       "price": 2.99,
       "category": "Beverages",
-      "stock": 100,
+      "stock": 80,
       "img": "./images/juice.jpg"
     },
     {
       "id": "8",
       "name": "Tomatoes",
       "price": 8.99,
-      "stock": 100,
+      "stock": 0,
       "category": "Produce",
       "img": "./images/tomato.jpg"
     },
@@ -68,7 +68,7 @@
       "id": "9",
       "name": "Apples",
       "price": 4.99,
-      "stock": 100,
+      "stock": 98,
       "category": "Produce",
       "img": "./images/apples.jpeg"
     },
@@ -76,7 +76,7 @@
       "id": "10",
       "name": "Bananas",
       "price": 3.99,
-      "stock": 100,
+      "stock": 93,
       "category": "Produce",
       "img": "./images/banana.webp"
     },
@@ -84,7 +84,7 @@
       "id": "11",
       "name": "Oranges",
       "price": 5.99,
-      "stock": 100,
+      "stock": 98,
       "category": "Produce",
       "img": "./images/orange.webp"
     },
@@ -92,7 +92,7 @@
       "id": "12",
       "name": "Grapes",
       "price": 6.99,
-      "stock": 100,
+      "stock": 98,
       "category": "Produce",
       "img": "./images/grapes.webp"
     },
@@ -108,15 +108,15 @@
       "id": "14",
       "name": "Blueberries",
       "price": 8.99,
-      "stock": 100,
+      "stock": 96,
       "category": "Produce",
       "img": "./images/blueberry.webp"
     },
     {
       "id": "15",
       "name": "Watermelon",
-      "price": 9.99,
-      "stock": 100,
+      "price": "12",
+      "stock": 0,
       "category": "Produce",
       "img": "./images/watermelone.webp"
     },
@@ -139,8 +139,8 @@
     {
       "id": "18",
       "name": "Peach",
-      "price": 12.99,
-      "stock": 100,
+      "price": "20",
+      "stock": 0,
       "category": "Produce",
       "img": "./images/peach.webp"
     },
@@ -196,7 +196,7 @@
       "id": "27",
       "name": "Deodorant",
       "price": 20.99,
-      "stock": 100,
+      "stock": 89,
       "category": "Personal Care",
       "img": "./images/deodrant.webp"
     },
@@ -228,7 +228,7 @@
       "id": "31",
       "name": "Candy",
       "price": 26.99,
-      "stock": 100,
+      "stock": 97,
       "category": "Snacks",
       "img": "./images/candy.webp"
     },
@@ -260,7 +260,7 @@
       "id": "35",
       "name": "Coffee",
       "price": 30.99,
-      "stock": 100,
+      "stock": 89,
       "category": "Beverages",
       "img": "./images/coffee1.webp"
     },
@@ -268,7 +268,7 @@
       "id": "36",
       "name": "Tea",
       "price": 31.99,
-      "stock": 100,
+      "stock": 95,
       "category": "Beverages",
       "img": "./images/tea1.webp"
     },
@@ -276,7 +276,7 @@
       "id": "37",
       "name": "Juice",
       "price": 32.99,
-      "stock": 100,
+      "stock": 97,
       "category": "Beverages",
       "img": "./images/juice.jpg"
     },
@@ -284,7 +284,7 @@
       "id": "38",
       "name": "Water",
       "price": 33.99,
-      "stock": 100,
+      "stock": 97,
       "category": "Beverages",
       "img": "./images/water.webp"
     },
@@ -300,10 +300,288 @@
   "Users": [
     {
       "id": "1",
-      "username" : "Youssef1234",
-      "email" : "youssefahemd729@gmail.com",
-      "password" : "123",
-      "role": "manager" 
+      "username": "Youssef1234",
+      "email": "youssefahemd729@gmail.com",
+      "password": "1234",
+      "role": "manager"
+    },
+    {
+      "id": "2",
+      "username": "Beshoy1234",
+      "email": "hbeshoy1@gmail.com",
+      "password": "1234",
+      "role": "manager"
+    },
+    {
+      "id": "3",
+      "username": "Talaat1234",
+      "email": "talaat1234@gmail.com",
+      "password": "1234",
+      "role": "cashier"
+    },
+    {
+      "username": "CandyHany",
+      "email": "candy@gmail.com",
+      "password": "candy",
+      "role": "manager",
+      "id": "G9rp4N_CBzU"
+    },
+    {
+      "username": "GinaEmil",
+      "email": "gina@gmail.com",
+      "password": "gina",
+      "role": "manager",
+      "id": "9-SP1lg5vmA"
+    },
+    {
+      "username": "abouabdou",
+      "email": "ahmed@gmail.com",
+      "password": "ahmed",
+      "role": "cashier",
+      "id": "bkDiX_whO3Y"
+    },
+    {
+      "username": "karim",
+      "email": "keks@gmail.com",
+      "password": "keks",
+      "role": "cashier",
+      "id": "dYulZwVH0kg"
+    }
+  ],
+  "OrdersLog": [
+    {
+      "id": "1",
+      "products": [
+        {
+          "id": "1",
+          "name": "romy cheese",
+          "price": "25",
+          "category": "Dairy",
+          "stock": "95",
+          "img": "./images/cheese.jpg"
+        },
+        {
+          "id": "2",
+          "name": "full milk",
+          "price": "20",
+          "category": "Dairy",
+          "stock": 100,
+          "img": "./images/milk.webp"
+        }
+      ],
+      "totalPrice": 45,
+      "dateTime": "2024-06-01T10:00:00Z",
+      "CashierUserName": "Talaat1234"
+    },
+    {
+      "products": [
+        {
+          "id": "2",
+          "name": "full milk",
+          "price": "20",
+          "category": "Dairy",
+          "stock": 93,
+          "img": "./images/milk.webp",
+          "quantity": 4
+        },
+        {
+          "id": "3",
+          "name": "Bread",
+          "price": 5.99,
+          "category": "Bakery",
+          "stock": 95,
+          "img": "./images/bread.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "15",
+          "name": "Watermelon",
+          "price": "12",
+          "stock": 9,
+          "category": "Produce",
+          "img": "./images/watermelone.webp",
+          "quantity": 9
+        }
+      ],
+      "totalPrice": "205.97",
+      "dateTime": "2026-05-08T00:11:05.731Z",
+      "CashierUserName": "Unknown Cashier",
+      "id": "zkhg4D3vlLg"
+    },
+    {
+      "products": [
+        {
+          "id": "2",
+          "name": "full milk",
+          "price": "20",
+          "category": "Dairy",
+          "stock": 89,
+          "img": "./images/milk.webp",
+          "quantity": 4
+        }
+      ],
+      "totalPrice": "80.00",
+      "dateTime": "2026-05-08T00:12:43.227Z",
+      "CashierUserName": "abouabdou",
+      "id": "40UBU4rV-ug"
+    },
+    {
+      "products": [
+        {
+          "id": "3",
+          "name": "Bread",
+          "price": 5.99,
+          "category": "Bakery",
+          "stock": 92,
+          "img": "./images/bread.jpg",
+          "quantity": 2
+        },
+        {
+          "id": "12",
+          "name": "Grapes",
+          "price": 6.99,
+          "stock": 100,
+          "category": "Produce",
+          "img": "./images/grapes.webp",
+          "quantity": 2
+        },
+        {
+          "id": "36",
+          "name": "Tea",
+          "price": 31.99,
+          "stock": 97,
+          "category": "Beverages",
+          "img": "./images/tea1.webp",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": "89.94",
+      "dateTime": "2026-05-08T00:21:23.611Z",
+      "CashierUserName": "abouabdou",
+      "id": "qLbNrFz78DU"
+    },
+    {
+      "products": [
+        {
+          "id": "7",
+          "name": "Juice",
+          "price": 2.99,
+          "category": "Beverages",
+          "stock": 100,
+          "img": "./images/juice.jpg",
+          "quantity": 14
+        },
+        {
+          "id": "10",
+          "name": "Bananas",
+          "price": 3.99,
+          "stock": 100,
+          "category": "Produce",
+          "img": "./images/banana.webp",
+          "quantity": 4
+        },
+        {
+          "id": "14",
+          "name": "Blueberries",
+          "price": 8.99,
+          "stock": 100,
+          "category": "Produce",
+          "img": "./images/blueberry.webp",
+          "quantity": 4
+        },
+        {
+          "id": "35",
+          "name": "Coffee",
+          "price": 30.99,
+          "stock": 94,
+          "category": "Beverages",
+          "img": "./images/coffee1.webp",
+          "quantity": 5
+        },
+        {
+          "id": "18",
+          "name": "Peach",
+          "price": 12.99,
+          "stock": 5,
+          "category": "Produce",
+          "img": "./images/peach.webp",
+          "quantity": 5
+        }
+      ],
+      "totalPrice": "313.68",
+      "dateTime": "2026-05-08T07:55:28.742Z",
+      "CashierUserName": "abouabdou",
+      "id": "VFmKZ2aB-_k"
+    },
+    {
+      "products": [
+        {
+          "id": "18",
+          "name": "Peach",
+          "price": "20",
+          "stock": "10",
+          "category": "Produce",
+          "img": "./images/peach.webp",
+          "quantity": 10
+        },
+        {
+          "id": "7",
+          "name": "Juice",
+          "price": 2.99,
+          "category": "Beverages",
+          "stock": 86,
+          "img": "./images/juice.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "9",
+          "name": "Apples",
+          "price": 4.99,
+          "stock": 100,
+          "category": "Produce",
+          "img": "./images/apples.jpeg",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": "218.95",
+      "dateTime": "2026-05-08T07:58:47.269Z",
+      "CashierUserName": "karim",
+      "id": "3qdFARs9vTU"
+    },
+    {
+      "products": [
+        {
+          "id": "7",
+          "name": "Juice",
+          "price": 2.99,
+          "category": "Beverages",
+          "stock": 83,
+          "img": "./images/juice.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "10",
+          "name": "Bananas",
+          "price": 3.99,
+          "stock": 96,
+          "category": "Produce",
+          "img": "./images/banana.webp",
+          "quantity": 3
+        },
+        {
+          "id": "11",
+          "name": "Oranges",
+          "price": 5.99,
+          "stock": 100,
+          "category": "Produce",
+          "img": "./images/orange.webp",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": "32.92",
+      "dateTime": "2026-05-08T08:14:59.338Z",
+      "CashierUserName": "karim",
+      "id": "ok01-UV7xro"
     }
   ]
 }

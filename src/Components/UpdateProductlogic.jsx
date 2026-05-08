@@ -5,6 +5,7 @@ import  {toast}  from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert2';
 function UpdateProductLogic() {
 
     const [product, setProduct] = useState({});
@@ -48,8 +49,10 @@ function UpdateProductLogic() {
             position: "top-right",
             autoClose: 1000,
         });
+
         
-        navigate('/')
+        
+        navigate('/ManagerHomePage')
     };
 
     return (
@@ -127,3 +130,4 @@ function UpdateProductLogic() {
 }
 
 export default UpdateProductLogic;
+

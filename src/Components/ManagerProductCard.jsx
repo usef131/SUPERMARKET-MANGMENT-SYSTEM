@@ -1,10 +1,7 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useCart } from '../Context/ProductContext';
-
 function ProductCard({ product }) {
 
-    const {addToCart , isStockAvailable} = useCart();
+
     return (
         <Card style={{ width: '20rem' }} >
             <Card.Img variant="top" src={product.img} width={100} height={250} />
@@ -16,9 +13,6 @@ function ProductCard({ product }) {
                 <Card.Text>
                     {product.category}
                 </Card.Text>
-                <Button variant="dark" onClick={() => addToCart(product) } disabled={!isStockAvailable(product)}>
-                    Add to Cart
-                </Button>
             </Card.Body>
         </Card>
     );

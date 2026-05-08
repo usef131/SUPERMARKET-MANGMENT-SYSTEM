@@ -1,10 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import { useCart } from '../Context/ProductContext';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ProductCard from './ProductCard';
 import { useProducts } from '../Hooks/useProducts';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';

@@ -1,18 +1,12 @@
 import Container from 'react-bootstrap/Container';
-import { useCart } from '../Context/ProductContext';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ProductCard from './ProductCard';
 import { useProducts } from '../Hooks/useProducts';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import UpdateProductLogic from './UpdateProductlogic';
 function UpdateProductPage() {
-    const { deleteProduct } = useCart();
-    const { data  , setData} = useProducts("http://localhost:3000/products");
+    const { data } = useProducts("http://localhost:3000/products");
     const navigate = useNavigate();
 
     return (

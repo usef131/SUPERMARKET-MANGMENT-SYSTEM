@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
     Container,
     Row,
@@ -9,28 +9,73 @@ import {
 } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
+
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
-        fullName: "",
+        username: "",
         email: "",
         password: "",
         confirmPassword: "",
+        role: ""
     });
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
+    const handleRoleChange = (e) => {
+    setFormData({
+      ...formData,
+      role: e.target.value,
+    });
+  };
 
-    const handleRegister = (e) => {
-        e.preventDefault();
+  const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
 
-        // Register Logic
-        console.log(formData);
-    };
+
+   const handleRegister = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await axios.get("http://localhost:3000/Users");
+
+    // check if email exists
+    const exist = res.data.find(
+      (user) => user.email === formData.email
+    );
+
+    if (exist) {
+      alert("Email already exists!");
+      return;
+    }
+
+    // check password match
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    // remove confirmPassword before sending to API
+    const { confirmPassword, ...userData } = formData;
+
+    // send only real user data
+    await axios.post("http://localhost:3000/Users", userData);
+
+    alert("Account created successfully!");
+
+   navigate("/", { replace: true });
+    window.location.reload();
+  } catch (error) {
+    console.log(error);
+    alert("Something went wrong");
+  }
+};
 
     return (
         <div
@@ -57,15 +102,15 @@ export default function RegisterPage() {
                                 </div>
 
                                 <Form onSubmit={handleRegister}>
-                                    {/* Full Name */}
+                                    {/* Username */}
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Full Name</Form.Label>
+                                        <Form.Label>Username</Form.Label>
                                         <Form.Control
                                             type="text"
-                                            name="fullName"
-                                            placeholder="Enter your full name"
+                                            name="username"
+                                            placeholder="Enter your username"
                                             size="lg"
-                                            value={formData.fullName}
+                                            value={formData.username}
                                             onChange={handleChange}
                                             style={{ borderRadius: "12px" }}
                                             required
@@ -117,14 +162,29 @@ export default function RegisterPage() {
                                         />
                                     </Form.Group>
 
-                                    {/* Terms */}
-                                    <div className="mb-4">
-                                        <Form.Check
-                                            type="checkbox"
-                                            label="I agree to the Terms & Conditions"
-                                            required
-                                        />
-                                    </div>
+                                    <div className="d-flex justify-content-between align-items-center mb-4">
+                                 <label>
+                                   <input
+                                    type="radio"
+                                   name="role"
+                                   value="manager"
+                                   checked={formData.role === "manager"}
+                                  onChange={handleRoleChange}
+                                      />
+                                  Manager
+                                    </label>
+
+                                     <label>
+                                  <input
+                                       type="radio"
+                                    name="role"
+                                      value="cashier"
+                                      checked={formData.role === "cashier"}
+                                    onChange={handleRoleChange}
+                                      />
+                                Cashier
+                               </label>
+                                 </div>
 
                                     {/* Register Button */}
                                     <Button

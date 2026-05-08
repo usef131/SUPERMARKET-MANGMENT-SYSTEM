@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
     Container,
     Row,
@@ -7,24 +7,23 @@ import {
     Form,
     Button,
 } from "react-bootstrap";
-
-import { useAuth } from "../Context/AuthContex";
+import { useAuth } from "../Context/AuthContext.jsx";
 import { Link } from "react-router-dom";
 export default function LoginPage() {
+
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role , setRole] = useState("")
     
-    const {CheckManager} = useAuth();
+    const {CheckUser} = useAuth();
 
     
     const handleLogin = (e) => {
         e.preventDefault();
 
         //  login logic 
-        CheckManager(email , password , role)
-        
+        CheckUser(email , password , role)
     };
 
     return (
@@ -98,12 +97,7 @@ export default function LoginPage() {
                                             checked={role === "cashier"}
                                             onChange={(e) => setRole(e.target.value)}
                                         />
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            Forgot Password?
-                                        </a>
+                                        
                                     </div>
 
                                     {/* Login Button */}

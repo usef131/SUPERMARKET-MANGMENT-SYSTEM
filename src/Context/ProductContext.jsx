@@ -2,7 +2,8 @@ import { createContext, useContext } from "react";
 import { toast } from 'react-toastify'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import axios from "axios";
-import swal from "Sweetalert2";
+import swal from "sweetalert2";
+import { useProducts } from "../Hooks/useProducts";
 const CartContext = createContext();
 
 const url = "http://localhost:3000/products";
@@ -14,6 +15,7 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useLocalStorage("cart", [])
+    const { fetchProducts } = useProducts(url);
 
     // Add To Cart
     const addToCart = (product) => {
@@ -35,6 +37,8 @@ export const CartProvider = ({ children }) => {
             autoClose: 1000,
             hideProgressBar: false,
         });
+
+        fetchProducts();
     };
     // Remove Item From Cart
     const removeFromCart = (id) => {
@@ -68,6 +72,7 @@ export const CartProvider = ({ children }) => {
             return item;
         })
         setCartItems(updatedCart);
+        fetchProducts();
     };
 
     const NumberOfItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -94,19 +99,76 @@ export const CartProvider = ({ children }) => {
             confirmButtonText: 'Confirm Checkout'
           }).then((result) => {
             if (result.isConfirmed) {
+                    decreaseStockOnCheckout();
                 swal.fire(
                 'Checked out!',
                 'Your order has been placed.',
                 'success')
+
+                 saveOrderLog({
+                    products: cartItems,
+                    totalPrice: cartTotalPrices.toFixed(2),
+                    dateTime: new Date().toISOString(),
+                    CashierUserName: JSON.parse(localStorage.getItem("user"))?.username || "Unknown Cashier"
+                });
                 clearCart();
             }
             })
     }
+
+
+    
     const UpdateProduct = async (updatedProduct) => {
 
         const response = await axios.put(`${url}/${updatedProduct.id}`, updatedProduct);
         return response;
     }
+
+    const saveOrderLog = async (orderDetails) => {
+        const response = await axios.post("http://localhost:3000/OrdersLog", orderDetails);
+        return response;
+    }
+
+    const updatedStock = async (productId, quantity) => {
+        try {
+            const response = await axios.get(`${url}/${productId}`);
+            const product = response.data;
+            let newStock = product.stock
+
+            if(quantity > product.stock) {
+                throw new Error("Not enough stock available");
+            }
+            else{
+            newStock = product.stock - quantity;
+            }
+
+            if (newStock < 0) {
+                newStock = product.stock;
+                throw new Error("Not enough stock available");
+            }
+
+            await axios.put(`${url}/${productId}`, { ...product, stock: newStock });
+        } catch (error) {
+            console.error("Error updating stock:", error);
+        }
+    }
+
+    const decreaseStockOnCheckout = async () => {
+        for (const item of cartItems) {
+            await updatedStock(item.id, item.quantity);
+        }
+    }
+
+   const isStockAvailable = (product) => {
+    const safeCart = cartItems || [];
+
+    const cartItem = safeCart.find((item) => item.id === product.id);
+
+    const quantityInCart = cartItem?.quantity || 0;
+
+    return Number(product.stock) > quantityInCart;
+};
+    
 
     const values = {
         addToCart,
@@ -119,7 +181,8 @@ export const CartProvider = ({ children }) => {
         addProduct,
         deleteProduct,
         ConfirmCheckout,    
-        UpdateProduct
+        UpdateProduct,
+        isStockAvailable
     }
 
     return <>

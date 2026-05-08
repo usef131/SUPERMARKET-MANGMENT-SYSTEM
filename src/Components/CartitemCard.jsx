@@ -1,13 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useCart } from '../Context/ProductContext';
 function CartitemCard({ product }) {
 
-    const {removeFromCart, updateQuantity} = useCart();
+    const {removeFromCart, updateQuantity , isStockAvailable} = useCart();
     return (
         <>
 
@@ -22,10 +18,10 @@ function CartitemCard({ product }) {
                 <Button variant="danger" className="ms-2" onClick={() => removeFromCart(product.id)}>
                     Remove from Cart
                 </Button>
-                <Button variant = "dark" className="ms-2" onClick={() => updateQuantity(product.id, product.quantity ? product.quantity + 1 : 1)}>
+                <Button variant = "dark" className="ms-2" onClick={() => updateQuantity(product.id, product.quantity ? product.quantity + 1 : 1)} disabled={!isStockAvailable(product)} >
                     +
                 </Button>
-                <Button variant = "dark" className="ms-2" onClick={() => updateQuantity(product.id, product.quantity > 1 ? product.quantity - 1 : 1)}>
+                <Button variant = "dark" className="ms-2" onClick={() => updateQuantity(product.id, product.quantity > 1 ? product.quantity - 1 : 1)} >
                     -
                 </Button>
             </Card.Body>

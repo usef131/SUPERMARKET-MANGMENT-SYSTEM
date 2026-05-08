@@ -54,7 +54,7 @@ function ShowCart() {
                                     <button className="btn btn-success w-100 " disabled={cartItems.length === 0} onClick={ConfirmCheckout}>
                                         Proceed to Checkout
                                     </button>
-                                    <button className="btn btn-dark w-100 mt-2" disabled={cartItems.length === 0} onClick={() => navigate('/')}>
+                                    <button className="btn btn-dark w-100 mt-2" disabled={cartItems.length === 0} onClick={() => navigate('/CashierHomePage')}>
                                         Continue Shopping
                                     </button>
                                     <button className ="btn btn-danger w-100 mt-2" onClick={clearCart} disabled={cartItems.length === 0}>

@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ProductCard from "./Components/ProductCard";
-import { useProducts } from "./Hooks/useProducts";
+import ManagerProductCard from "../Components/ManagerProductCard";
+import { useProducts } from "../Hooks/useProducts";
 import Spinner from 'react-bootstrap/Spinner';
-function Home() {
+function ManagerHomePage() {
     const url = "http://localhost:3000/products";
     const { data, loading, error } = useProducts(url);
 
@@ -25,14 +25,14 @@ function Home() {
             </div>
             <header className="bg-dark text-white text-center py-3 mb-4 mx-auto rounded shadow-sm w-25 mt-4">
                 <h1 className="text-center">Welcome to Our Store </h1>
-                <h5 className="text-center">Cashier Home Page</h5>
+                <h5 className="text-center">Manager Home Page</h5>
             </header>
             <Container className="mt-5">
                 <Row>
                     {
                         data.map((product) => (
                             <Col sm="12" lg="4" key={product.id} className="mb-4">
-                                <ProductCard product={product} />
+                                <ManagerProductCard product={product} />
                             </Col>
                         ))
                     }
@@ -43,4 +43,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default ManagerHomePage;
