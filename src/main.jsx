@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@popperjs/core/dist/umd/popper.min.js"
 import "bootstrap/dist/js/bootstrap.min.js"
@@ -12,12 +12,12 @@ import CartProvider from "./Context/ProductContext.jsx";
 import {AuthProvider} from './Context/AuthContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <AuthProvider>
         <CartProvider>
           <App />
         </CartProvider>
       </AuthProvider>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>
 )
