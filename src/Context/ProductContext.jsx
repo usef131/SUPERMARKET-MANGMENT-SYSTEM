@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 import { toast } from 'react-toastify'
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useLocalStorage } from "../Hooks/useLocalStorage";
 import axios from "axios";
 import swal from "sweetalert2";
 import { useProducts } from "../Hooks/useProducts";
