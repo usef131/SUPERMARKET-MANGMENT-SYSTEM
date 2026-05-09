@@ -603,6 +603,5 @@
       "CashierUserName": "karim",
       "id": "ok01-UV7xro"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
