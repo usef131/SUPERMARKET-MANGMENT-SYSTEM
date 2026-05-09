@@ -16,7 +16,7 @@ function Navigation() {
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
                     <Navbar.Brand href="/ManagerHomePage">
-                        <i className='fa-brands fa-react'></i> React Market
+                        <i className='fa-brands fa-react'></i> SuperMarket
                     </Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Link href="/ManagerHomePage"><i className="bi bi-house me-2"></i>Home</Nav.Link>
