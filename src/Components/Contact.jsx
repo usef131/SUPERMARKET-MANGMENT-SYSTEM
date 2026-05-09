@@ -19,7 +19,7 @@ function Contact() {
           form.current.reset();
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('FAILED.', error.text);
           toast.error("Failed to send message.");
         },
       );
