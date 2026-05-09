@@ -19,8 +19,8 @@ export default function LoginPage() {
     const {CheckUser} = useAuth();
 
     
-    const handleLogin = (e) => {
-        e.preventDefault();
+    const handleLogin = (event) => {
+        event.preventDefault();
 
         //  login logic 
         CheckUser(email , password , role)
@@ -35,7 +35,9 @@ export default function LoginPage() {
             }}
         >
             <Container>
+
                 <Row className="justify-content-center">
+                    <h1 className="text-center mb-4 ">Login Page</h1>
                     <Col md={5}>
                         <Card
                             className="shadow-lg border-0"
@@ -59,7 +61,7 @@ export default function LoginPage() {
                                             size="lg"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{ borderRadius: "10px" }}
                                             required
                                         />
                                     </Form.Group>
@@ -73,7 +75,7 @@ export default function LoginPage() {
                                             size="lg"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
-                                            style={{ borderRadius: "12px" }}
+                                            style={{ borderRadius: "10px" }}
                                             required
                                         />
                                     </Form.Group>
@@ -107,7 +109,7 @@ export default function LoginPage() {
                                         size="lg"
                                         className="w-100"
                                         style={{
-                                            borderRadius: "12px",
+                                            borderRadius: "10px",
                                             padding: "12px",
                                         }}
                                     >
