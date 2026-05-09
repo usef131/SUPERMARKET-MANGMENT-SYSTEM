@@ -23,7 +23,7 @@ function CashierNavBar() {
                         <i className='fa-brands fa-react'></i> React Market
                     </Navbar.Brand>
                     <Nav className="ms-auto">
-                        <Nav.Link href="/CashierHomePage"><i className="bi bi-house me-2"></i>Home</Nav.Link>
+                        <Nav.Link href="/CashierHomePage"><i className="bi bi-house me-2 "></i>Home</Nav.Link>
 
                         <Nav.Link href="/cart">
                             <i className="bi bi-cart me-2">

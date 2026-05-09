@@ -33,11 +33,11 @@ function Contact() {
 
       <div className="container mb-5 mt-5 ">
         <form className="w-25 mx-auto" onSubmit={sendEmail} ref={form}>
-          <div className="mb-3">
+          <div className="mb-4">
             <label htmlFor="email" className="form-label"><b>Email</b></label>
-            <input type="email" className="form-control shadow-sm" id="email" placeholder="Enter your email here..." name='user_email' />
+            <input type="email" className="form-control shadow-sm" id="email" placeholder="examble@gmail.com" name='user_email' />
           </div>
-          <div className="mb-3">
+          <div className="mb-4">
             <label htmlFor="message" className="form-label "><b>Message</b></label>
             <textarea name="message" id="message" className="form-control shadow-sm" placeholder="Enter your message here..."></textarea>
           </div>
